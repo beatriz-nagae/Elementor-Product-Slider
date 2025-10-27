@@ -1,153 +1,90 @@
-.wpce_single_item *{
-	box-sizing: border-box;
-}
+/* --- CARD DO PRODUTO --- */
 .wpce_single_item {
-	cursor: ;
-    word-break: break-word;
+  background: #fff;
+  border: none !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border-radius: 16px;
+  overflow: hidden;
+  width: 286px;
+  height: auto;
+  text-align: left;
+  padding: 0;
 }
+
+/* --- IMAGEM --- */
+.wpce_single_item .wpce_image {
+  width: 286px;
+  height: 286px;
+  background: url('5.png') no-repeat center center;
+  background-size: cover;
+  flex-shrink: 0;
+  aspect-ratio: 1 / 1;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* --- CONTEÚDO --- */
 .wpce_content {
-    text-align: center;
-    padding: 25px 15px;
-    line-height: 25px;
-    font-size: 16px;
-}
-.wpce_content a{
-	color: #0274be;
-	text-decoration: none;
-	-webkit-transition: all 200ms;
-	transition: all 200ms;
-}
-.wpce_content a:hover{
-	color: #3a3a3a;
-}
-.wpce_title h2{
-	font-size: 30px;
-	line-height: 27px;
-	margin-bottom: 12px;
-}
-.wpce_content p{
-	text-align: justify;
-}
-.wpce_content .wpce_add_to_cart_btn{
-	text-transform: capitalize;
-	display: inline-block;
-	padding: 10px 15px;
-	background: #0274be;
-	color: #fff;
-	border: 2px solid #0274be;
-	transition: all 200ms;
-}
-.wpce_content .wpce_add_to_cart_btn:hover{
-	background: #fff;
-	color: #0274be;
-	border: 2px solid #0274be;
-}
-/*	Slick Items */
-.wpce_item{
-	padding: 12px;
-}
-.wpce_single_item{
-	background: #fff;
-/*	box-shadow: 0px 0px 8px 3px rgba(99, 98, 98, 0.7);*/
-}
-.wpce_thumbnail a{
-	display: block;
-}
-.wpce_thumbnail img{
-	display: block;
-	margin: 0 auto;
-	max-width: 100%;
-/*    box-shadow: -3px 3px 9px 0px #949494; */
-}
-.wpce_thumbnail {
-}
-.wpce-arrow{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 99999;
-    width: 34px;
-    height: 34px;
-    color: #ffff;
-    background: #0274be;
-    text-align: center;
-    line-height: 26px;
-    font-size: 20px;
-    border-radius: 50%;
-    border: 4px solid #0274be;
-    -webkit-transition: all 200ms;
-    transition: all 200ms;
-}
-.wpce-arrow:hover{
-	cursor: pointer;
-	background: #fff;
-	color: #0274be;
-	border-color: #0274be;
-}
-.wpce_slider_wrapper{
-	padding-left: 40px;
-	padding-right: 40px;
-}
-.wb-arrow-prev{
-	left: 0;
-}
-.wb-arrow-next{
-	right: 0;
-}
-.wpce-add-to-cart{
-	display: inline-block;
-}
-.wpce_price{
-	color: #0274be;
-	margin-bottom: 10px;
-	font-size: 18px;
-}
-.wpce-rating{
+  padding: 12px 16px;
+  font-family: 'Montserrat', sans-serif;
 }
 
+/* --- TÍTULO --- */
+.wpce_content .product-title {
+  color: #000;
+  font-size: 14.028px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18.035px; /* 128.571% */
+  margin-bottom: 4px;
+  text-align: left;
+}
 
-/*star rating for products*/
-.wpce-rating{
-	text-align: left;
+/* --- PREÇO PIX --- */
+.wpce_content .price-pix {
+  color: #2EA7A6;
+  font-size: 14.028px;
+  font-weight: 500;
+  line-height: 21.041px; /* 150% */
+  text-align: left;
+  margin-bottom: 2px;
 }
-.wpce-rating .star-rating{
-	margin: 0 auto .5em auto;
-    backface-visibility: hidden;
-    font-size: 14px;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-	justify-content: center;
-    color: #0274be;
-    overflow: hidden;
-    position: relative;
-    height: 1em;
-    line-height: 1;
-    width: 5.4em;
-    font-family: star;
-    word-break: normal;
+
+/* --- PREÇO NORMAL --- */
+.wpce_content .price-base {
+  color: #03256C;
+  font-size: 22.043px;
+  font-weight: 600;
+  line-height: 21.041px; /* 95.455% */
+  text-align: left;
 }
-.wpce-rating .star-rating::before {
-    content: '\73\73\73\73\73';
-    color: #0274be;
-    float: left;
-    top: 0;
-    left: 0;
-    position: absolute;
+
+/* --- PREÇO PARCELADO --- */
+.wpce_content .price-installments {
+  color: #555;
+  font-size: 11.022px;
+  font-weight: 400;
+  line-height: 21.041px; /* 190.909% */
+  text-align: left;
+  margin-top: 4px;
 }
-.wpce-rating .star-rating span {
-    overflow: hidden;
-    float: left;
-    top: 0;
-    left: 0;
-    position: absolute;
-    padding-top: 1.5em;
+
+/* --- BOTÃO ADD TO CART (invisível) --- */
+.wpce_single_item .add-to-cart {
+  display: none !important;
 }
-.wpce-rating .star-rating span::before {
-    content: '\53\53\53\53\53';
-    top: 0;
-    position: absolute;
-    left: 0;
+
+/* --- SETA FORA DO CARROSSEL --- */
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.slider-arrow.prev {
+  left: -40px; /* seta fora do carrossel à esquerda */
+}
+
+.slider-arrow.next {
+  right: -40px; /* seta fora do carrossel à direita */
 }
